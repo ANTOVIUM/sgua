@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="Никита и Ксения приглашают вас на свадьбу 24 июля 2027 года. Ресторан «Эдельвейс», Гумарово.">
+  <title>Никита и Ксения — 24 июля 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/nikita-kseniya.webp">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#invitation">К содержанию</a>
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Никита и Ксения, наверх">Н / К <span>24.07.27</span></a>
+    <nav aria-label="Разделы приглашения"><a href="#program">Программа</a><a href="#place">Место</a><a href="#dress">Дресс-код</a><a class="nav-rsvp" href="#rsvp">Ответить <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-overline"><span>Приглашение на свадьбу</span><span>Суббота / 24 июля 2027</span></div>
+      <h1 id="hero-title">Никита <i>&</i> Ксения</h1>
+      <figure class="hero-photo">
+        <img src="assets/nikita-kseniya.webp" width="1280" height="960" alt="Настоящая совместная фотография Никиты и Ксении" fetchpriority="high">
+        <figcaption><span>Никита и Ксения</span><span>Июль 2027</span></figcaption>
+      </figure>
+      <div class="hero-end"><p>Дорогие друзья и близкие, будем счастливы разделить с вами один из самых важных дней нашей жизни.</p><a class="arrow-link" href="#rsvp">Ответить на приглашение <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="intro section-pad" id="invitation">
+      <div class="section-index">01 / Приглашение</div>
+      <div class="intro-main">
+        <h2>Этот день хочется<br>провести <em>с вами.</em></h2>
+        <p>Приглашаем вас на нашу свадьбу. Встретимся в июльскую субботу, чтобы разделить важный момент и остаться вместе на весь вечер.</p>
+      </div>
+      <div class="date-panel">
+        <div class="date-lockup"><strong>24</strong><span>июля<br>2027</span></div>
+        <div class="date-meta"><span>Суббота · Гумарово</span><span>До встречи осталось</span></div>
+        <div class="countdown" aria-label="Время до свадьбы"><span><strong id="days">—</strong><small>дней</small></span><span><strong id="hours">—</strong><small>часов</small></span><span><strong id="minutes">—</strong><small>минут</small></span><span><strong id="seconds">—</strong><small>секунд</small></span></div>
+      </div>
+      <div class="calendar" aria-label="Календарь июля 2027 года"><div class="calendar-head"><span>Июль</span><span>2027</span></div><div class="weekdays"><span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span></div><div class="calendar-grid" id="calendar-grid"></div></div>
+    </section>
+
+    <section class="program section-pad" id="program">
+      <div class="section-index">02 / Программа дня</div>
+      <div class="section-title"><h2>Время<br><em>быть вместе.</em></h2><p>Сохраните этот день свободным для нас.</p></div>
+      <div class="timeline" role="group" aria-label="Программа свадьбы">
+        <div class="times" id="timeline-controls">
+          <button type="button" class="time active" data-index="0" aria-pressed="true"><strong>15:30</strong><span>Сбор гостей<br>и фуршет</span><span class="time-arrow" aria-hidden="true">↗</span></button>
+          <button type="button" class="time" data-index="1" aria-pressed="false"><strong>16:00–17:00</strong><span>Выездная<br>регистрация</span><span class="time-arrow" aria-hidden="true">↗</span></button>
+          <button type="button" class="time" data-index="2" aria-pressed="false"><strong>17:00</strong><span>Банкет</span><span class="time-arrow" aria-hidden="true">↗</span></button>
+        </div>
+        <div class="time-detail" aria-live="polite"><span class="detail-num" id="detail-num">01 / 03</span><span class="detail-time" id="detail-time">15:30</span><h3 id="detail-title">Сбор гостей и фуршет</h3><p id="detail-text">Встречаемся, знакомимся и настраиваемся на вечер. Будет время спокойно обняться и поднять первый бокал.</p></div>
+      </div>
+    </section>
+
+    <section class="place section-pad" id="place">
+      <div class="section-index">03 / Место встречи</div>
+      <div class="place-layout">
+        <div><h2>Эдельвейс<span>Ресторан</span></h2><p class="place-lead">За городом, среди близких.</p></div>
+        <div class="place-address"><p>Ресторан находится на территории комплекса «Мандала».</p><address>Оренбургская область,<br>г. Кувандык, дер. Гумарово,<br>ул. Садовая, 1А</address><a class="arrow-link light" href="https://yandex.com/maps/org/mandala_dolina_schastya/150253264941/" target="_blank" rel="noopener noreferrer">Открыть маршрут <span aria-hidden="true">↗</span></a><div class="map-links"><a href="https://2gis.ru/orenburg/firm/70000001083735507" target="_blank" rel="noopener noreferrer">2ГИС ↗</a><a href="https://yandex.com/maps/org/mandala_dolina_schastya/150253264941/" target="_blank" rel="noopener noreferrer">Яндекс Карты ↗</a><button type="button" id="copy-address">Скопировать адрес</button></div><p class="map-note">Ссылка открывает карточку комплекса. Маршрут строится от вашего местоположения в приложении карт.</p></div>
+      </div>
+    </section>
+
+    <section class="dress section-pad" id="dress">
+      <div class="section-index">04 / Дресс-код</div>
+      <div class="dress-layout">
+        <div class="dress-copy"><h2>Палитра<br><em>нашего дня.</em></h2><p>Нам будет особенно приятно, если в своих образах вы поддержите природную палитру нашего дня.</p><p class="small-copy">Просим оставить белый цвет для образа невесты и по возможности избегать ярких акцентных оттенков.</p><p class="dress-note">Жених — черный смокинг. Невеста — белое платье. Черный для гостей уместен.</p></div>
+        <div class="palette-area">
+          <div class="fabric-card" id="fabric-card"><div class="fabric-bottom"><span>Выбранный оттенок</span><span id="fabric-number">01 / 09</span></div></div>
+          <div class="shade-content"><div class="swatches" id="swatches" role="group" aria-label="Выберите цвет палитры"></div><div class="shade-info"><h3 id="shade-title">Шалфей</h3><p id="shade-desc">Мягкий зеленый с приглушенным серым подтоном.</p><p id="shade-pairs" class="shade-pairs">Сочетается: шампань · тауп · песочный</p></div><button type="button" class="text-action" id="save-palette">Сохранить палитру PNG <span aria-hidden="true">↓</span></button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="details section-pad"><div class="section-index">05 / Важное</div><h2>Несколько<br><em>деталей.</em></h2><div class="detail-list"><article><span>01 / Только для взрослых</span><p>Наш праздник пройдет в формате только для взрослых. Просим заранее позаботиться о том, с кем смогут провести этот вечер ваши малыши, и благодарим за понимание.</p></article><article><span>02 / Проживание</span><p>Если после завершения праздника вам потребуется размещение с ночевкой, пожалуйста, сообщите нам об этом в анкете гостя.</p></article></div></section>
+
+    <section class="rsvp section-pad" id="rsvp">
+      <div class="section-index">06 / Ваш ответ</div>
+      <div class="rsvp-layout"><div class="rsvp-intro"><h2>Будете<br><em>с нами?</em></h2><p>Ответьте, пожалуйста, на несколько вопросов. Ваши пожелания помогут нам подготовить вечер.</p><span>Никита и Ксения</span></div><div class="form-shell"><div class="form-top"><span>Анкета гостя</span><span id="step-label">01 / 04</span></div><div class="progress"><div id="progress-fill"></div></div><form id="rsvp-form" novalidate><div id="step-content"></div><div class="form-error" id="form-error" role="alert" hidden></div><div class="form-actions"><button type="button" id="back" class="button-back" hidden>← Назад</button><button type="button" id="next" class="button button-dark">Продолжить <span aria-hidden="true">↗</span></button></div></form><p class="privacy">Данные анкеты используются только для подготовки праздника.</p></div></div>
+    </section>
+  </main>
+  <footer><div class="footer-line"><span>До встречи</span><span>24 / 07 / 2027</span></div><strong>Никита <i>&</i> Ксения</strong><div class="footer-bottom"><span>Гумарово · ресторан «Эдельвейс»</span><a id="calendar-link" href="#">Добавить в календарь ↓</a></div></footer>
+</body>
+</html>
