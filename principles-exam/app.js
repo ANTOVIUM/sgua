@@ -84,7 +84,7 @@ async function flush(){if(flushPromise)return flushPromise;
    else if(e.code)showError(failText(e));
    break;
   }
- }} )().finally(()=>{flushPromise=null;updateStatus();});return flushPromise;
+ }} )().finally(()=>{flushPromise=null;updateStatus();if(state?.status==='active'&&navigator.onLine&&Object.keys(cache.pending).length)setTimeout(()=>flush(),2000);});return flushPromise;
 }
 function go(n){if(n<0||n>=state.screens.length)return;screen=n;materialIndex=null;persist();renderWork();window.scrollTo({top:0,behavior:'instant'});$('#task-title')?.focus({preventScroll:true});}
 async function advance(){if(busy)return;busy=true;clearError();const b=$('#next');b.disabled=true;b.textContent='Сохраняем…';try{
